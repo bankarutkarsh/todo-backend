@@ -21,8 +21,9 @@ app.use('/',routes);
 const port = process.env.PORT || 5500;
 const hostname = 'localhost';
 
+const ATLAS_URL = process.env.ATLAS_URL;
 
-mongoose.connect('mongodb+srv://utkarshbankar07:FFFlGUtvBecfDU6d@cluster0.mkfhnjk.mongodb.net/Todo-App?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(ATLAS_URL);
 .then(res => {
     app.listen(port, hostname, () => {
         console.log(`Server is running at ${hostname}: ${port}`);
