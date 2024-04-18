@@ -1,6 +1,6 @@
 const Done = require('../Database/Done');
 
-exports.getDone = (res,req) => {
+exports.getDone = (req,res) => {
     Done.find()
     .then(response => {
         res.status(200).json({message: "Done list fetched successfully", Done: response})

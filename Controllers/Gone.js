@@ -1,6 +1,6 @@
 const Gone = require('../Database/Gone');
 
-exports.getGone = (res,req) => {
+exports.getGone = (req,res) => {
     Gone.find()
     .then(response => {
         res.status(200).json({message: "Gone list fetched successfully", Gone: response})

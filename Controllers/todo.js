@@ -1,6 +1,6 @@
 const Todo = require('../Database/todo');
 
-exports.getTodo = (res,req) => {
+exports.getTodo = (req,res) => {
     Todo.find()
     .then(response => {
         res.status(200).json({message: "Todo list fetched successfully", todo: response})

@@ -1,9 +1,9 @@
 const Progress = require('../Database/progress');
 
-exports.getProgress = (res,req) => {
+exports.getProgress = (req,res) => {
     Progress.find()
     .then(response => {
         res.status(200).json({message: "Progress list fetched successfully", Progress: response})
     })
-    .catch(err => res.status(500).json({error: err}))
+    .catch(err => console.log(err));
 }

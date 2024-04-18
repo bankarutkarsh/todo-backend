@@ -1,9 +1,9 @@
 const express = require('express');
 const cors = require("cors");
 const dotenv = require('dotenv')
+const mongoose = require('mongoose');
 
 const routes = require('./routes');
-const { default: mongoose } = require('mongoose');
 
 const app = express();
 
@@ -22,7 +22,7 @@ const port = process.env.PORT || 5500;
 const hostname = 'localhost';
 
 
-mongoose.connect(process.env.ATLAS_URL)
+mongoose.connect('mongodb+srv://utkarshbankar07:FFFlGUtvBecfDU6d@cluster0.mkfhnjk.mongodb.net/Todo-App?retryWrites=true&w=majority',{useNewUrlParser: true, useUnifiedTopology: true})
 .then(res => {
     app.listen(port, hostname, () => {
         console.log(`Server is running at ${hostname}: ${port}`);
