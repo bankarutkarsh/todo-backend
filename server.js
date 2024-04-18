@@ -23,7 +23,7 @@ const hostname = 'localhost';
 
 const ATLAS_URL = process.env.ATLAS_URL;
 
-mongoose.connect(ATLAS_URL);
+mongoose.connect(ATLAS_URL)
 .then(res => {
     app.listen(port, hostname, () => {
         console.log(`Server is running at ${hostname}: ${port}`);
