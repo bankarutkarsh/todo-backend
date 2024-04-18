@@ -6,4 +6,4 @@ const GoneSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('Gone', GoneSchema);
+module.exports = mongoose.model('GoneList', GoneSchema, 'Gone');

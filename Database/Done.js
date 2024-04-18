@@ -6,4 +6,4 @@ const DoneSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('Done', DoneSchema);
+module.exports = mongoose.model('DoneList', DoneSchema, 'Done');
