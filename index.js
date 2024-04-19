@@ -10,7 +10,7 @@ const app = express();
 dotenv.config();
 
 const corsOptions = {
-    origin:'https://to-do-app-ten-snowy-12.vercel.app/', 
+    origin:'https://to-do-app-ten-snowy-12.vercel.app', 
     credentials:true,            
     optionSuccessStatus:200
 }
